@@ -16,6 +16,11 @@ const config = {
   alias: {
     '@': path.resolve(__dirname, '..', 'src'),
   },
+  cache: {
+    enable: true,
+    type: 'filesystem',
+    cacheDirectory: path.resolve(__dirname, "..", '.temp_cache')
+  },
   defineConstants: {
   },
   copy: {

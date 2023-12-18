@@ -1,7 +1,7 @@
 import { View } from '@tarojs/components'
 import { Button } from "@nutui/nutui-react-taro"
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement } from '@/store/modules/home'
+import { increment } from '@/store/modules/home'
 
 import './index.scss'
 
