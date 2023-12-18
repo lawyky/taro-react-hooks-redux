@@ -1,30 +1,30 @@
 import { View } from '@tarojs/components'
 import { Button } from "@nutui/nutui-react-taro"
 import { useSelector, useDispatch } from 'react-redux'
-import { increment } from '@/store/modules/home'
+import { setToken } from '@/store/modules/user'
 
 import './index.scss'
 
 const Index = () => {
-  const counter = useSelector((state: any) => {
+  const token = useSelector((state: any) => {
     console.log(state)
-    return state.homeReducer.counter
+    return state.userSlice.token
   })
 
   const dispatch = useDispatch()
   const handle = () => {
-    dispatch(increment(1))
+    dispatch(setToken(Math.random()))
   }
 
   return (
     <View className="nutui-react-demo">
       <View className="index">
-        欢迎使用 NutUI React 开发 Taro 多端项目。
-        {counter}
+        欢迎使用项目。
+        {token}
       </View>
       <View className="index">
         <Button type="primary" className="btn" onClick={handle}>
-          NutUI React Button
+          Button
         </Button>
       </View>
     </View>
