@@ -12,7 +12,6 @@ const Index = () => {
   const token = useSelector((state: any) => {
     return state.userSlice.token
   })
-
   useEffect(() => {
     console.log(token)
   }, [token])
