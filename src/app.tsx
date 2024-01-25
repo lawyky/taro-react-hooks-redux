@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { StrictMode, useEffect } from 'react'
 import { Provider } from 'react-redux'
 import { useDidShow, useDidHide } from '@tarojs/taro'
 // 全局样式
 import './app.scss'
-import store, {persistor} from '@/store'
+import store, { persistor } from '@/store'
 import { PersistGate } from "redux-persist/integration/react"
 
 function App(props) {
@@ -19,7 +19,9 @@ function App(props) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        { props.children }
+        <StrictMode>
+          { props.children }
+        </StrictMode>
       </PersistGate>
     </Provider>
   )

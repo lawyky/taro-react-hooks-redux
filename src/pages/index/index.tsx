@@ -5,7 +5,6 @@ import { setToken } from '@/store/modules/user'
 
 import './index.scss'
 import { useState, useEffect } from 'react'
-import Taro from '@tarojs/taro'
 
 const Index = () => {
   const [v, setV] = useState(0)

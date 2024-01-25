@@ -1,6 +1,5 @@
 import { Tabbar } from '@nutui/nutui-react-taro';
 import { Cart, Category, Find, Home, User } from '@nutui/icons-react-taro';
-import { useState } from 'react';
 
 const App = () => {
   return (
