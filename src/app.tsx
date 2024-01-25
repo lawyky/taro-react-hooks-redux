@@ -1,4 +1,4 @@
-import React, { StrictMode, useEffect } from 'react'
+import { StrictMode, useEffect } from 'react'
 import { Provider } from 'react-redux'
 import { useDidShow, useDidHide } from '@tarojs/taro'
 // 全局样式
