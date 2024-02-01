@@ -1,13 +1,13 @@
-import { View } from '@tarojs/components'
+// @ts-ignore
+import { View, Map, Ad } from '@tarojs/components'
 import { Button } from "@nutui/nutui-react-taro"
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setToken } from '@/store/modules/user'
 
 import './index.scss'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 const Index = () => {
-  const [v, setV] = useState(0)
   const token = useSelector((state: any) => {
     return state.userSlice.token
   })
@@ -17,20 +17,25 @@ const Index = () => {
 
   const dispatch = useDispatch()
   const handle = () => {
-    setV(Math.random())
     dispatch(setToken(Math.random()))
+  }
+  const onError = (err) => {
+    console.log(err)
   }
 
   return (
     <View className="nutui-react-demo">
       <View className="index">
-        欢迎使用项目{v}。
-        {token}
+        欢迎使用项目{token}。
       </View>
       <View className="index">
         <Button type="primary" className="btn" onClick={handle}>
           Button
         </Button>
+      </View>
+      <View style={{ width: '100%', height: '300rpx' }}>
+        <Map id={"111"} style={{ width: '100%', height: '300rpx' }} latitude={27} longitude={127} onError={onError} />
+        {/*<Ad unitId={"123"}></Ad>*/}
       </View>
     </View>
   )

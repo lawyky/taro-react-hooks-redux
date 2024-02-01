@@ -23,6 +23,11 @@ const config = {
   },
   defineConstants: {
   },
+  sass: {
+    resource: ['src/styles/variable.scss'],
+    projectDirectory: path.resolve(__dirname, '..'),
+    data: '',
+  },
   copy: {
     patterns: [
     ],
