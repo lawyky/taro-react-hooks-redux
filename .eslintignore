@@ -1,0 +1,10 @@
+dist
+dist-h5
+lib
+node_modules
+*.d.ts
+coverage
+examples
+.swc
+dist
+

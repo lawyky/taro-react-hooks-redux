@@ -1,30 +1,33 @@
-import { StrictMode, useEffect } from 'react'
-import { Provider } from 'react-redux'
-import { useDidShow, useDidHide } from '@tarojs/taro'
+import { StrictMode, useEffect } from 'react';
+// import { Provider } from 'react-redux';
+import { useDidHide, useDidShow } from '@tarojs/taro';
 // 全局样式
-import './app.scss'
-import store, { persistor } from '@/store'
-import { PersistGate } from "redux-persist/integration/react"
+import './app.scss';
+// import store, { persistor } from '@/store/redux';
+// import { PersistGate } from 'redux-persist/integration/react';
 
 function App(props) {
   // 可以使用所有的 React Hooks
-  useEffect(() => {})
+  useEffect(() => {
+  });
 
   // 对应 onShow
-  useDidShow(() => {})
+  useDidShow(() => {
+  });
 
   // 对应 onHide
-  useDidHide(() => {})
+  useDidHide(() => {
+  });
 
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <StrictMode>
-          { props.children }
-        </StrictMode>
-      </PersistGate>
-    </Provider>
-  )
+    // <Provider store={store}>
+    //   <PersistGate loading={null} persistor={persistor}>
+    <StrictMode>
+      {props.children}
+    </StrictMode>
+    //   </PersistGate>
+    // </Provider>
+  );
 }
 
-export default App
+export default App;

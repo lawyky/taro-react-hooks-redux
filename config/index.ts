@@ -1,4 +1,4 @@
-import path from "path"
+import path from 'path';
 
 const config = {
   projectName: 'taro-demo',
@@ -17,22 +17,19 @@ const config = {
     '@': path.resolve(__dirname, '..', 'src'),
   },
   cache: {
-    enable: true,
+    enable: false,
     type: 'filesystem',
-    cacheDirectory: path.resolve(__dirname, "..", '.temp_cache')
+    cacheDirectory: path.resolve(__dirname, '..', '.temp_cache')
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   sass: {
     resource: ['src/styles/variable.scss'],
     projectDirectory: path.resolve(__dirname, '..'),
     data: '',
   },
   copy: {
-    patterns: [
-    ],
-    options: {
-    }
+    patterns: [],
+    options: {}
   },
   framework: 'react',
   compiler: {
@@ -75,8 +72,7 @@ const config = {
       },
       autoprefixer: {
         enable: true,
-        config: {
-        }
+        config: {}
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
@@ -87,11 +83,11 @@ const config = {
       }
     }
   }
-}
+};
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'));
   }
-  return merge({}, config, require('./prod'))
-}
+  return merge({}, config, require('./prod'));
+};
