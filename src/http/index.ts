@@ -3,7 +3,7 @@ import axios from 'axios';
 import Taro from '@tarojs/taro';
 import buildURL from 'axios/lib/helpers/buildURL';
 import qs from 'qs';
-import configStore from '@/store/zustand';
+import useStore from '@/store/zustand';
 
 type ParamsSerializer = AxiosRequestConfig['paramsSerializer']
 
@@ -58,7 +58,7 @@ instance.interceptors.request.use((config) => {
   const { method, params } = config;
   // 附带鉴权的token
   const headers: any = {
-    'X-TOKEN': configStore.getState().token
+    'X-TOKEN': useStore.getState().token
   };
   // 不缓存get请求
   if (method === 'get') {
@@ -89,7 +89,7 @@ instance.interceptors.response.use((v) => {
       title: '请重新登录',
       icon: 'none'
     });
-    configStore.getState().setToken('');
+    useStore.getState().setToken('');
     // @ts-ignore
     setTimeout(() => {
       // userStore.logoutStore()

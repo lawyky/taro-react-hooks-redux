@@ -6,7 +6,8 @@ const App = () => {
     <>
       <Tabbar onSwitch={(idx) => {
         console.log(idx);
-      }} defaultValue={4} fixed
+      }} defaultValue={4}
+        safeArea
       >
         <Tabbar.Item title="首页" icon={<Home size={18} />} value={9} />
         <Tabbar.Item title="分类" icon={<Category size={18} />} />

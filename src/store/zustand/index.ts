@@ -10,17 +10,17 @@ interface Action {
   setToken: (token: string) => void;
 }
 
-const configStore = create(
+const useStore = create(
   persist<State & Action>(
     (set) => ({
       token: '',
       setToken: (token: string) => set({ token })
     }),
     {
-      name: 'config',
+      name: 'userToken',
       storage: createJSONStorage(() => storage),
     }
   )
 );
 
-export default configStore;
+export default useStore;

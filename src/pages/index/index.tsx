@@ -8,7 +8,7 @@ import { getCaptcha } from '@/api/home';
 import './index.scss';
 import { useDidShow } from '@tarojs/taro';
 
-import configStore from '@/store/zustand';
+import useStore from '@/store/zustand';
 
 const Index = memo(() => {
   // const token = useSelector((state: any) => {
@@ -18,7 +18,7 @@ const Index = memo(() => {
   //   console.log(token);
   // }, [token]);
 
-  const { token, setToken } = configStore();
+  const { token, setToken } = useStore();
 
   // const dispatch = useDispatch();
   const handle = () => {
