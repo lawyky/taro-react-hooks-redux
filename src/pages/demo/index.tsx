@@ -7,6 +7,7 @@ const App = () => {
       <Tabbar onSwitch={(idx) => {
         console.log(idx);
       }} defaultValue={4}
+        fixed
         safeArea
       >
         <Tabbar.Item title="首页" icon={<Home size={18} />} value={9} />
