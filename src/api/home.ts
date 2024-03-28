@@ -1,5 +1,7 @@
-import request from '../http';
+import alovaInst from '@/utils/http';
 
-export const getCaptcha = () => {
-  return request<any>('get', '/api/v1/publics/captcha');
+export const newCaptcha = (params: any) => {
+  return alovaInst.Get<Workspace.DATA>('/api/v1/publics/captcha', {
+    params,
+  });
 };

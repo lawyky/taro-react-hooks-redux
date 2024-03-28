@@ -17,3 +17,15 @@ declare namespace NodeJS {
   }
 }
 
+declare namespace Workspace {
+  interface Resp<T> {
+    data?: T
+    message?: string
+  }
+
+  interface DATA {
+    id: string,
+    blob: string
+  }
+}
+

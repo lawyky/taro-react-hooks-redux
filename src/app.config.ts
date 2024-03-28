@@ -1,8 +1,8 @@
 export default defineAppConfig({
   pages: [
-    'pages/home/index',
-    'pages/demo/index',
     'pages/index/index',
+    'pages/demo/index',
+    'pages/home/index',
     'pages/redirect/index'
   ],
   window: {
@@ -22,20 +22,20 @@ export default defineAppConfig({
   //     'pages': ['pages/pageThree', 'pages/pageFour']
   //   }
   // ],
-  tabBar: {
-    list: [
-      {
-        pagePath: 'pages/home/index',
-        iconPath: 'assets/icon/home-o.png',
-        selectedIconPath: 'assets/icon/home.png',
-        text: '首页'
-      },
-      {
-        pagePath: 'pages/demo/index',
-        iconPath: 'assets/icon/mine-o.png',
-        selectedIconPath: 'assets/icon/mine.png',
-        text: '日志'
-      }
-    ]
-  },
+  // tabBar: {
+  //   list: [
+  //     {
+  //       pagePath: 'pages/home/index',
+  //       iconPath: 'assets/icon/home-o.png',
+  //       selectedIconPath: 'assets/icon/home.png',
+  //       text: '首页'
+  //     },
+  //     {
+  //       pagePath: 'pages/demo/index',
+  //       iconPath: 'assets/icon/mine-o.png',
+  //       selectedIconPath: 'assets/icon/mine.png',
+  //       text: '日志'
+  //     }
+  //   ]
+  // },
 });

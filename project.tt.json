@@ -2,10 +2,10 @@
   "miniprogramRoot": "./",
   "projectname": "taro-demo",
   "description": "taro-react-hooks-starter",
-  "appid": "ttf44a82f76b7aa61501",
+  "appid": "ttabe4dd5934d5961401",
   "setting": {
     "urlCheck": false,
-    "es6": false,
+    "es6": true,
     "postcss": false,
     "minified": false
   },

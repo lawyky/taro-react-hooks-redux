@@ -23,7 +23,7 @@ const config = {
   },
   defineConstants: {},
   sass: {
-    resource: ['src/styles/variable.scss'],
+    resource: [''],
     projectDirectory: path.resolve(__dirname, '..'),
     data: '',
   },
